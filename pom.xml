@@ -9,7 +9,7 @@
 
     <properties>
         <spring.version>4.0.5.RELEASE</spring.version>
-        <hibernate.version>4.3.5.FINAL</hibernate.version>
+        <hibernate.version>4.3.5.Final</hibernate.version>
         <jackson.version>1.9.13</jackson.version>
     </properties>
 
@@ -95,6 +95,13 @@
             <version>5.1.31</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
+
 
         <!--
                 JAVA SERVLET
@@ -127,7 +134,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.2</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -3,17 +3,17 @@ package com.mlefevre.samples.data.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USERS")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Integer id;
 
-    @Column
+    @Column(name = "lastname")
     protected String lastName;
 
-    @Column
+    @Column(name = "firstname")
     protected String firstName;
 
 

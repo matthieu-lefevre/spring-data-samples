@@ -12,4 +12,6 @@ public interface UserService {
 
     User createUser(User user);
 
+    User getUser(Integer id);
+
 }

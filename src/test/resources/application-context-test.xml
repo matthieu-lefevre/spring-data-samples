@@ -13,7 +13,7 @@
 
     <context:annotation-config />
     <context:component-scan base-package="com.mlefevre.samples.data" />
-    <context:property-placeholder location="classpath:database.properties" />
+    <context:property-placeholder location="classpath:database-test.properties" />
 
     <mvc:annotation-driven />
 

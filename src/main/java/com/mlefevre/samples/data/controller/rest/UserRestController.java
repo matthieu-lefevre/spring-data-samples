@@ -4,9 +4,9 @@ import com.mlefevre.samples.data.entity.User;
 import com.mlefevre.samples.data.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -19,12 +19,7 @@ public class UserRestController {
 
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
-    public List<User> getAll() {
-
-        User user = new User();
-        user.setFirstName("Matthieu");
-        user.setLastName("LEFEVRE");
-        this.userService.createUser(user);
+    public @ResponseBody List<User> getAll() {
 
         return this.userService.getAllUsers();
     }
