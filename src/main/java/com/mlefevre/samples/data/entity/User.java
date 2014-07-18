@@ -1,6 +1,8 @@
 package com.mlefevre.samples.data.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -8,6 +10,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id")
     protected Integer id;
 
     @Column(name = "lastname")
@@ -15,6 +18,9 @@ public class User {
 
     @Column(name = "firstname")
     protected String firstName;
+
+    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+    protected List<Article> articles = new ArrayList<Article>();
 
 
     public User() {}
@@ -42,5 +48,17 @@ public class User {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
+    }
+
+    public void addArticle(Article article) {
+        this.articles.add(article);
     }
 }

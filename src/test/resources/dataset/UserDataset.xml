@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
 
-    <USERS id="1" lastname="lefevre" firstname="tilleux" />
-    <USERS id="2" lastname="dev" firstname="test" />
+    <USERS user_id="1" lastname="lefevre" firstname="tilleux" />
+    <USERS user_id="2" lastname="dev" firstname="test" />
 
 </dataset>

@@ -1,0 +1,10 @@
+<dataset>
+
+    <USERS user_id="1" lastname="lefevre" firstname="tilleux" />
+    <ARTICLES article_id="1" title="title1" owner="1" />
+    <TAGS tag_id="1" name="tag1" />
+    <TAGS tag_id="2" name="tag2" />
+    <ARTICLES_TAGS tag_id="1" article_id="1" />
+    <ARTICLES_TAGS tag_id="2" article_id="1" />
+
+</dataset>
